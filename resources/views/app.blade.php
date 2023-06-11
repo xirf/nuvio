@@ -2,4 +2,5 @@
     <x-home.hero></x-home.hero>
     <x-home.features></x-home.features>
     <x-home.collection></x-home.collection>
+    <x-home.products></x-home.products>
 </x-layouts.app>

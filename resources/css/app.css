@@ -11,4 +11,20 @@
     .smooth-transition{
         transition: all .3s ease-in-out;
     }
+
+
+    .red-decoration{
+        position: relative;
+        padding: 10px 0;
+    }
+
+    .red-decoration::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 90%;
+        height: 3px;
+        background-color: #e53e3e;
+    }
 }
