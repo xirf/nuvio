@@ -1,37 +1,31 @@
 @php
 $collectionItems = [
     [
-        'colSpan' => '1',
         'aspectRatio' => 'square',
         'image' => '/images/decoration.jpg',
         'labelText' => 'Dekorasi',
     ],
     [
-        'colSpan' => '1',
         'aspectRatio' => 'square',
         'image' => '/images/lamp.png',
         'labelText' => 'Lampu',
     ],
     [
-        'colSpan' => '2',
         'aspectRatio' => '2/1',
         'image' => '/images/desk.jpg',
         'labelText' => 'Meja',
     ],
     [
-        'colSpan' => '2',
         'aspectRatio' => '2/1',
         'image' => '/images/diningset.jpg',
         'labelText' => 'Dining Set',
     ],
     [
-        'colSpan' => '1',
         'aspectRatio' => 'square',
         'image' => '/images/sofa.jpg',
         'labelText' => 'Sofa',
     ],
     [
-        'colSpan' => '1',
         'aspectRatio' => 'square',
         'image' => '/images/shelves.jpg',
         'labelText' => 'Meja Rak',
@@ -47,12 +41,17 @@ $collectionItems = [
     </div>
     <div class="grid grid-cols-4 gap-8 mt-10 w-full max-w-screen-lg">
         @foreach($collectionItems as $item)
-            <div class="col-span-{{ $item['colSpan'] }} aspect-{{ $item['aspectRatio'] }} border-8 border-white relative shadow-md"
-                style="background: url('{{ $item['image'] }}') center center / cover no-repeat">
-                <div class="absolute bottom-2 left-4 rounded-lg font-bold text-white bg-pink-500 py-1 px-4">
+            <a href="#" class="border-8 border-white relative shadow-lg overflow-hidden group"
+                style="
+                    grid-column: span {{ ($item['aspectRatio'] === 'square') ? '1' : '2' }} / span {{ ($item['aspectRatio'] === 'square') ? '1' : '2' }};
+                    aspect-ratio: {{ $item['aspectRatio'] }};
+                "
+            >
+                <img src="{{$item['image']}}" alt="{{ $item['labelText'] }}" class="object-cover w-full h-full group-hover:w-120 group-hover:h-120 smooth-transition filter grayscale-[0.5] group-hover:grayscale-0" />
+                <div class="absolute bottom-2 left-4 text-sm tracking-wide rounded-lg font-bold text-white bg-pink-500 py-1 px-4">
                     {{ $item['labelText'] }}
                 </div>
-            </div>
+            </a>
         @endforeach
     </div>
 </div>

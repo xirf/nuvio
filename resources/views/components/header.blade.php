@@ -5,10 +5,6 @@
             'link' => '/',
         ],
         [
-            'name' => 'Blog',
-            'link' => '/blog',
-        ],
-        [
             'name' => 'Shop',
             'link' => '/shop',
         ],
@@ -36,7 +32,7 @@
                 <div class="flex items-center justify-center navbar-center flex-grow">
                     <div class="flex font-medium relative">
                         @foreach ($menu as $index => $item)
-                            <div class=" w-28 text-center transition-all duration-300 hover:text-red-500 {{ strtolower($active) == strtolower($item['name']) ? 'text-red-500' : '' }}"
+                            <div class=" w-28 text-center smooth-transition hover:text-red-500 {{ strtolower($active) == strtolower($item['name']) ? 'text-red-500' : '' }}"
                                 id="menuItems"
                                 data-active="{{ strtolower($active) == strtolower($item['name']) ? 'activeMenu' : '' }}">
                                 <a href="{{ $item['link'] }}">{{ $item['name'] }}</a>

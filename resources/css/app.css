@@ -6,3 +6,9 @@
 *{
     font-family: 'Nunito', sans-serif;
 }
+
+@layer components{
+    .smooth-transition{
+        transition: all .3s ease-in-out;
+    }
+}
