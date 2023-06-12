@@ -50,9 +50,7 @@
 												{{ $fmt->formatCurrency($productContent['price'], 'IDR') }}
 											</s>
 											<span class="font-bold">
-												{{-- calc the discount --}}
 												{{ $fmt->formatCurrency($productContent['price'] - ($productContent['price'] * $productContent['discount']) / 100, 'IDR') }}
-
 											</span>
 										@else
 											<span class="font-bold">
