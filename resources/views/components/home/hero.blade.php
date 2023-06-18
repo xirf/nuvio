@@ -1,14 +1,14 @@
-<main class="min-h-screen relative flex justify-between items-center w-full m-auto flex-row p-32">
-    <div class='bg-slate-100 w-full bottom-32 -z-50 h-full left-0 absolute '></div>
+<main class="min-h-[700px] h-screen relative flex justify-between items-center w-full m-auto flex-row px-32">
+    <div class='bg-slate-100 w-full bottom-24 -z-50 h-full left-0 absolute '></div>
     <div class='flex flex-col gap-5'>
-        <p class='text-gray-400 font-medium max-w-xs'>
+        <p class='text-gray-400 text-xs 2xl:text-base font-medium max-w-xs'>
             Terlaris bulan ini
-            <span class="divider divider-vertical my-0"></span>
+            <span class="divider h-2 divider-vertical my-0"></span>
         </p>
-        <h1 class='text-6xl font-extrabold'>Minimalist<span class='text-red-500'>.</span> </h1>
-        <h1 class='text-6xl font-extrabold'>Wicker Chair</h1>
-        <p class='text-xl max-w-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-        <div class='mt-5 w-fit'>
+        <h1 class='text-5xl 2xl:text-6xl font-extrabold'>Minimalist<span class='text-red-500'>.</span> </h1>
+        <h1 class='text-5xl 2xl:text-6xl font-extrabold'>Wicker Chair</h1>
+        <p class='text-lg 2xl:text-xl max-w-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        <div class='2xl:mt-5 w-fit'>
             <a href="/checkout" class='font-bold group'>
                 <div class='relative py-2 group-hover:text-red-500 transition-all duration-300 ease-in-out'>
                     <p>Pesan Sekarang</p>
@@ -19,7 +19,7 @@
             </a>
         </div>
 
-        <div class='h-40 flex items-start gap-5 flex-col text-xs justify-end'>
+        <div class='h-24 2xl:h-40 flex items-start gap-5 flex-col text-xs justify-end'>
             <p class='text-red-500 font-medium max-w-xs'>
                 Konsultasi Gratis <a href="tel:+6288989843040" class="text-gray-700">+62 889 8984 3040</a>
             </p>
@@ -35,5 +35,5 @@
             </div>
         </div>
     </div>
-    <img src="/images/wicker.png" alt="" class='w-full max-w-2xl h-auto' />
+    <img src="/images/wicker.png" alt="" class='w-full max-w-lg 2xl:max-w-2xl h-auto' />
 </main>

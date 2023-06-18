@@ -21,9 +21,9 @@
 
 <div class="drawer drawer-end">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content">
-        <header class="sticky top-0 left-0 w-full transition-all duration-1000 z-50">
-            <div class="navbar max-w-7xl m-auto ">
+    <div class="drawer-content w-full">
+        <header class="sticky top-0 left-0 w-full px-32 flex justify-center transition-all duration-1000 z-[999]">
+            <div class="navbar max-w-7xl ">
                 <div class="">
                     <a href="/" class="font-extrabold text-xl">
                         Nuvi<span class='text-red-500'>o</span>
@@ -66,7 +66,7 @@
             </div>
         </header>
 
-        <div class='max-w-screen-2xl m-auto px-10'>
+        <div class='max-w-screen-2xl w-full m-auto px-10'>
             {{ $slot }}
         </div>
     </div>

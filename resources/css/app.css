@@ -27,4 +27,33 @@
         height: 3px;
         background-color: #e53e3e;
     }
+
+    .submenu li{
+        @apply text-gray-400 font-medium smooth-transition relative;
+    }
+
+    .submenu li::before{
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        max-width: 0;
+        height: 3px;
+        background-color: #e53e3e;
+        transition: all .3s ease-in-out;
+    }
+
+    .submenu li:hover::before{
+        max-width: 50px;
+    }
+
+    .submenu li:hover{
+        @apply text-gray-700;
+    }
+
+}
+
+*{
+    box-sizing: border-box;
 }

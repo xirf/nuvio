@@ -1,4 +1,4 @@
-<div class="flex items-center justify-center flex-wrap gap-20 py-10 -mt-24 mb-8">
+<div class="flex items-center justify-center flex-wrap gap-20 py-10 -mt-24 2xl:-mt-16 mb-8">
     @foreach ([['Pengiriman Gratis', 'Khusus Jatim'], ['Garansi 1 Tahun', 'untuk cacat produksi'], ['Dukungan 24/7', 'Konsultasi gratis'], ['Harga Transparan', 'Terjangkau dan mudah']] as $item)
         <div class="flex items-center justify-center gap-5">
             
