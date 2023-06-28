@@ -21,10 +21,10 @@
     .red-decoration::after{
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: 1px;
         left: 0;
         width: 90%;
-        height: 3px;
+        height: 2px;
         background-color: #e53e3e;
     }
 
@@ -56,4 +56,9 @@
 
 *{
     box-sizing: border-box;
+}
+
+.masked-lr{
+    -webkit-mask-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);
 }

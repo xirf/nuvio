@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('app', ['title' => 'Custom Title']);
 });
+
+// /product/:id 
+Route::get("/product/{id}", function($id) {
+    return view('product', ['title' => 'Product ' . $id]);
+});

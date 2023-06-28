@@ -1,6 +1,6 @@
-<div class="flex items-center justify-center flex-wrap gap-20 py-10 -mt-24 2xl:-mt-16 mb-8">
+<div class="flex items-center justify-center flex-wrap gap-10 py-10 -mt-20 2xl:-mt-16 mb-8">
     @foreach ([['Pengiriman Gratis', 'Khusus Jatim'], ['Garansi 1 Tahun', 'untuk cacat produksi'], ['Dukungan 24/7', 'Konsultasi gratis'], ['Harga Transparan', 'Terjangkau dan mudah']] as $item)
-        <div class="flex items-center justify-center gap-5">
+        <div class="flex items-center justify-center gap-3">
             
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-10 h-10 text-red-500">
@@ -19,9 +19,9 @@
                 @endif
             </svg>
 
-            <div class="flex flex-col gap-1">
-                <h2 class="text-xl font-bold">{{ $item[0] }}</h2>
-                <p class="text-sm text-gray-400">{{ $item[1] }}</p>
+            <div class="flex flex-col">
+                <h2 class="text-base font-bold">{{ $item[0] }}</h2>
+                <p class="text-xs text-gray-400">{{ $item[1] }}</p>
             </div>
         </div>
     @endforeach

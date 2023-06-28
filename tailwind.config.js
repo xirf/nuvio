@@ -27,6 +27,10 @@ module.exports = {
                 120: "120%",
                 82: "350px",
             },
+            fontSize: {
+                us: "8px",
+                xxs: "0.625rem",
+            },
             maxWidth: {
                 10: "10px",
                 20: "20px",
@@ -40,6 +44,10 @@ module.exports = {
                 100: "100px",
                 110: "110px",
             },
+            padding: {
+                xs: "1px",
+                s: "2px",
+            }
         },
     },
     plugins: [require("daisyui")],
