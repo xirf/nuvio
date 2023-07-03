@@ -23,10 +23,10 @@
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content w-full">
         <header class="sticky top-0 left-0 w-full px-14 flex justify-center transition-all duration-1000 z-[999]">
-            <div class="navbar max-w-4xl ">
+            <div class="navbar max-w-screen-xl ">
                 <div class="">
                     <a href="/" class="font-extrabold text-xl">
-                        Nuvi<span class='text-red-500'>o</span>
+                        Nuvio<span class='text-red-500'>.</span>
                     </a>
                 </div>
                 <div class="flex items-center justify-center navbar-center flex-grow">
@@ -38,8 +38,6 @@
                                 <a href="{{ $item['link'] }}">{{ $item['name'] }}</a>
                             </div>
                         @endforeach
-                        <div class="h-default w-4 bg-red-500 absolute bottom-0 transition-all duration-300 translate-x-4"
-                            id="menuDeco"></div>
                     </div>
                 </div>
                 <div class='grid gap-5 grid-cols-3'>
@@ -66,7 +64,7 @@
             </div>
         </header>
 
-        <div class='max-w-5xl m-auto px-10'>
+        <div class='max-w-screen-2xl m-auto px-10'>
             {{ $slot }}
         </div>
     </div>
@@ -81,26 +79,7 @@
 </div>
 
 <script>
-    const menuItems = document.querySelectorAll('#menuItems');
-    const menuDeco = document.querySelector('#menuDeco');
     const header = document.querySelector('header');
-    let activeMenuIndex = 0;
-    let menuWidth = menuItems[0].offsetWidth;
-    console.log(menuWidth)
-
-    menuItems.forEach((item, index) => {
-        if (item.dataset.active === 'activeMenu') {
-            activeMenuIndex = index;
-        }
-
-        item.addEventListener('mouseover', () => {
-            menuDeco.style.left = `${index * menuWidth}px`;
-        });
-
-        item.addEventListener('mouseleave', () => {
-            menuDeco.style.left = `${activeMenuIndex * menuWidth}px`;
-        });
-    });
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {

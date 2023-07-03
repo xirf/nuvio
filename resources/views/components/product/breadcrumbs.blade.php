@@ -1,6 +1,6 @@
 <div class="px-14 pt-20 -mt-20 py-4 w-full grid grid-cols-2 rounded-md" id="_breadcrumbs">
 	<div class="col-span-1 flex justify-end  flex-col">
-		<h2 class="text-3xl font-bold"> Belanja </h2>
+		<h2 class="text-3xl font-bold"> {{ $name }} </h2>
 		<div class="text-xxs breadcrumbs">
 			<ul>
 				<li>
@@ -10,24 +10,28 @@
 							<path stroke-linecap="round" stroke-linejoin="round"
 								d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
 						</svg>
-
 						Home
 					</a>
 				</li>
-				<li>
-					<a href="/decoration">
-						Dekorasi
-					</a>
+
+				@foreach ($links as $link)
+					<li>
+						{{-- check if last element --}}
+						@if ($loop->last)
+							{{ $link['title'] }}
+						@break
+
+					@else
+						<a href="{{ $link['url'] }}">{{ $link['title'] }}</a>
+					@endif
 				</li>
-				<li>
-					Kursi Modern
-				</li>
-			</ul>
-		</div>
+			@endforeach
+		</ul>
 	</div>
-	<div class="col-span-1 h-56 flex justify-end  object-contain overflow-hidden ">
-		<img class="h-full w-auto " id="decorationImage" src="/images/wicker.png" alt="Wicker Chair">
-	</div>
+</div>
+<div class="col-span-1 h-56 flex justify-end  object-contain overflow-hidden ">
+	<img class="h-full w-auto " id="decorationImage" src="/images/wicker.png" alt="Wicker Chair">
+</div>
 </div>
 
 <script>
@@ -96,7 +100,8 @@
 	const imageUrl = document.getElementById('decorationImage').src;
 	getAccentColorFromImage(imageUrl)
 		.then((rgb) => {
-			document.getElementById("_breadcrumbs").style.backgroundImage = `linear-gradient(rgba(255, 255, 255, 0), rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.2))`;
+			document.getElementById("_breadcrumbs").style.backgroundImage =
+				`linear-gradient(rgba(255, 255, 255, 0), rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.2))`;
 		})
 		.catch((error) => {
 			console.error('Error:', error);

@@ -1,20 +1,17 @@
 <?php
 
-namespace App\View\Components\product;
+namespace App\View\Components\category;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class breadcrumbs extends Component
+class item extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public string $name,
-        public array $links
-    )
+    public function __construct()
     {
         //
     }
@@ -24,6 +21,6 @@ class breadcrumbs extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.product.breadcrumbs');
+        return view('components.category.item');
     }
 }

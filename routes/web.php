@@ -18,6 +18,20 @@ Route::get('/', function () {
 });
 
 // /product/:id 
-Route::get("/product/{id}", function($id) {
+Route::get("/product/{id}", function ($id) {
     return view('product', ['title' => 'Product ' . $id]);
+});
+
+// 3D View
+Route::get("/ar/{id}", function ($id) {
+    return view('ar', ['title' => 'AR ' . $id]);
+});
+
+Route::get("/category/{name}", function ($name) {
+    return view('category', ['Category' => $name]);
+});
+
+
+Route::get("/shop", function () {
+    return view('shop');
 });
