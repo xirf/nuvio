@@ -47,23 +47,15 @@
 				scene = new THREE.Scene();
                 
 				new RGBELoader()
-                // .setPath( 'textures/equirectangular/' )
 					.setPath( 'https://threejs.org/examples/textures/equirectangular/' )
 					.load( 'royal_esplanade_1k.hdr', function ( texture ) {
 
-						// texture.mapping = THREE.EquirectangularReflectionMapping;
-
-						
                         texture.mapping = THREE.EquirectangularReflectionMapping;
-                        
 
 						scene.environment = texture;
 
 						render();
 
-						// model
-
-						// const loader = new GLTFLoader().setPath( 'models/gltf/DamagedHelmet/glTF/' );
 						const loader = new GLTFLoader().setPath( 'https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/' );
 						loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
 
@@ -105,7 +97,6 @@
 
 			}
 
-			//
 
 			function render() {
 
@@ -116,7 +107,6 @@
 		</script>
         <video src="" style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: -100;"></video>
         <script>
-            // get webcam
             navigator.mediaDevices.getUserMedia({video: true})
             .then(stream => {
                 let video = document.querySelector('video');

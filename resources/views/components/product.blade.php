@@ -3,9 +3,9 @@
 
 		<div class="card flex-shrink-0 shadow-2xl bg-base-100 col-span-1">
 			<div class="card-body">
-				<div class="image-carosel flex flex-col items-center justify-center gap-5">
-					<div class="h-64 w-64 object-contain grid items-center overflow-hidden relative" id="carousel-images">
-						<img class="w-full h-auto" id="displayeImage" src="/images/wicker.png">
+				<div class="image-carosel h-120 flex flex-col items-center justify-center gap-5">
+					<div class="h-120 w-full object-contain grid items-center overflow-hidden relative" id="carousel-images">
+						<img class="w-auto h-120" id="displayeImage" src="/images/wicker.png">
 					</div>
 					<div id="carousel-thumbnails">
 						<ul class="flex gap-5">
